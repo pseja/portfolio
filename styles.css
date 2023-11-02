@@ -1,0 +1,27 @@
+body {
+    color: #333; /* DEFAULT TEXT COLOR */
+}
+
+.json-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+}
+
+.json-content {
+    font-family: "Courier New", monospace; /* TEXT FONT IN BOX */
+    border: 1px solid red; /* BORDER COLOR */
+    background-color: blanchedalmond; /* BG COLOR OF BOX */
+    padding: 20px; /* BOX PADDING */
+    font-size: 3vh; /* SIZE */
+    font-weight: bold;
+}
+
+.key {
+    color: #ff5733; /* Color for keys */
+}
+
+.value {
+    color: darkgreen; /* Color for values */
+}
