@@ -1,22 +1,26 @@
 const jsonData = {
-    name: "Your Name",
-    title: "Front-End Developer",
+    name: "neco",
+    title: "neco",
     contact: {
-        email: "your.email@example.com",
-        phone: "123-456-7890",
-        website: "www.yourwebsite.com",
-        location: "Your City, Your Country",
-    }
+        email: "email",
+        phone: "+420123456789",
+        neco: {
+            dalsi: "test",
+            jestedalsi: "test"
+        }
+    },
+    test: "neco"
 };
 
-function formatJSON(obj, indent = 0) {
+function formatJSON(obj, currentIndent = 0) {
+    const indent = 4; // INDENT SPACES FOR NESTED OBJECTS
+
     const keys = Object.keys(obj);
-    const spaces = " ".repeat(indent);
-    const innerSpaces = " ".repeat(indent + 2); // INDENT + 2 SPACES FOR NESTED OBJECTS
+    const innerSpaces = " ".repeat(currentIndent + indent);
 
     let result = "";
 
-    if (indent === 0) {
+    if (currentIndent === 0) {
         result = "{\n";
     }
 
@@ -26,21 +30,19 @@ function formatJSON(obj, indent = 0) {
         const value = obj[key];
 
         if (typeof value === "object") {
-            result += `{\n${formatJSON(value, indent + 4)}\n${spaces}}`;
+            result += `{\n${formatJSON(value, currentIndent + indent)}${innerSpaces}}`;
         } else if (typeof value === "string") {
             result += `<span class="value">"${value}"</span>`;
         } else {
             result += `<span class="value">${value}</span>`;
         }
-
-        if (index < keys.length - 1) {
+        if (index < keys.length - 1)
             result += ",\n";
-        } else {
+        else
             result += "\n";
-        }
     });
 
-    if (indent === 0) {
+    if (currentIndent === 0) {
         result += "}";
     }
 

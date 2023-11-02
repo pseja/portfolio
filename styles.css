@@ -1,4 +1,5 @@
 body {
+    background-color: aquamarine;
     color: #333; /* DEFAULT TEXT COLOR */
 }
 
@@ -19,9 +20,9 @@ body {
 }
 
 .key {
-    color: #ff5733; /* Color for keys */
+    color: #ff5733;
 }
 
 .value {
-    color: darkgreen; /* Color for values */
+    color: darkgreen;
 }
