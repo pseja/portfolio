@@ -1,0 +1,44 @@
+body {
+    background-color: #161821;
+    color: #6b7089; /* DEFAULT TEXT COLOR */
+}
+
+/* LINKS */
+a {
+    color: #a093c7;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #89b8c2;
+}
+
+a:hover {
+    text-shadow: 0 0 1px #ffffff;
+}
+
+.json-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+}
+
+.json-content {
+    font-family: "Courier New", monospace; /* TEXT FONT IN BOX */
+    border: 1px solid #6b7089; /* BORDER COLOR */
+    background-color: #1e2132; /* BG COLOR OF BOX */
+    color: #c6c8d1;
+    padding: 20px; /* BOX PADDING */
+    font-size: 3vh; /* SIZE */
+    /* font-weight: bold; */
+}
+
+.key {
+    font-weight: bold;
+    color: #84a0c6;
+}
+
+.value {
+    color: #a093c7;
+}
