@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="/images/LP_logo.ico" />
+        <link rel="icon" type="image/x-icon" href="LP_logo.ico" />
         <style>
             body {
                 background-color: #161821;
@@ -97,6 +97,8 @@
                                 array[i].startsWith("<a href=")
                             ) {
                                 result += array[i];
+                            } else if (!isNaN(array[i])) {
+                                result += `<span class="value">${array[i]}</span>`;
                             } else {
                                 result += `<span class="value">"${array[i]}"</span>`;
                             }
@@ -117,6 +119,8 @@
                             value.startsWith("<a href=")
                         ) {
                             result += value;
+                        } else if (!isNaN(value)) {
+                            result += `<span class="value">${value}</span>`;
                         } else {
                             result += `<span class="value">"${value}"</span>`;
                         }
