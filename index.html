@@ -8,6 +8,11 @@
             body {
                 background-color: #161821;
                 color: #6b7089; /* DEFAULT TEXT COLOR */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
             }
 
             /* LINKS */
@@ -25,10 +30,8 @@
             }
 
             .json-container {
-                display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 100vh; /* Center vertically */
             }
 
             .json-content {
@@ -48,6 +51,32 @@
 
             .value {
                 color: #a093c7;
+            }
+
+            /* RESPONSIVITY FOR TABLETS */
+            @media (max-width: 768px) {
+                body {
+                    font-size: 16px;
+                }
+
+                .json-content {
+                    font-size: 2vh;
+                }
+            }
+
+            /* RESPONSIVITY FOR PHONES */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 14px;
+                }
+
+                .json-container {
+                    padding: 20px;
+                }
+
+                .json-content {
+                    font-size: 1.5vh;
+                }
             }
         </style>
         <title>Lukáš Pšeja</title>
